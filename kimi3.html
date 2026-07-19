@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCC Charter Applications — Status &amp; Call Report Tracker (Jul 2019 – Jul 2026)</title>
+<meta name="description" content="Status of every novel OCC national bank and trust charter application filed July 2019 – July 2026: OCC source documents, application PDFs, named officers/directors/counsel, and FFIEC call-report data.">
+<meta property="og:title" content="OCC Charter Applications — Status & Call Report Tracker">
+<meta property="og:description" content="56 charter applications over 7 years: statuses, approval timelines, application PDFs, named officers and directors, and Q1 2026 call-report data.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --bg:#0a0f1c; --panel:#101a30; --panel2:#0d1526; --border:#1e2c4a; --border2:#27395f;
+    --text:#e9edf5; --muted:#8fa0bd; --faint:#5d6d8c;
+    --gold:#f0b64c; --teal:#2dd4bf; --blue:#5aa2ff; --purple:#b48cff; --green:#3fce8d; --red:#f27070; --gray:#93a0b8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+  .hero{position:relative;padding:56px 0 36px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(900px 380px at 12% -10%,rgba(45,212,191,.10),transparent 60%),
+    radial-gradient(800px 400px at 88% -20%,rgba(90,162,255,.09),transparent 60%);pointer-events:none}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:700;border:1px solid rgba(45,212,191,.35);padding:6px 14px;border-radius:999px;background:rgba(45,212,191,.07)}
+  h1{font-size:clamp(28px,4vw,44px);line-height:1.12;letter-spacing:-.02em;margin:20px 0 12px;font-weight:800}
+  .sub{color:var(--muted);font-size:clamp(14px,1.5vw,16.5px);max-width:860px}
+  .sub b{color:var(--text)}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .badge{font-size:12.5px;color:var(--muted);border:1px solid var(--border);background:var(--panel);border-radius:999px;padding:7px 14px;display:inline-flex;gap:8px;align-items:center}
+  .badge b{color:var(--text)}
+  section{padding:44px 0}
+  .sec-title{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .sec-title h2{font-size:clamp(21px,2.5vw,28px);letter-spacing:-.01em;font-weight:800}
+  .sec-title .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:700}
+  .sec-sub{color:var(--muted);font-size:14.5px;max-width:900px;margin-bottom:24px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-top:28px}
+  .kpi{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:16px;padding:18px 18px 16px;position:relative;overflow:hidden}
+  .kpi::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent,var(--teal))}
+  .kpi .num{font-size:clamp(24px,2.8vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--accent,var(--text))}
+  .kpi .lbl{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4}
+  .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:18px;padding:22px}
+  .card h3{font-size:15px;font-weight:700;margin-bottom:2px}
+  .card .note{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:12px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .grid2{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+  /* Days-to-CA chart */
+  .gantt{width:100%}
+  .g-row{display:grid;grid-template-columns:235px 1fr 190px;align-items:center;gap:10px;padding:3px 0;border-bottom:1px solid rgba(30,44,74,.45)}
+  .g-row:hover{background:rgba(90,162,255,.04)}
+  .g-name{font-size:12px;color:var(--text);text-align:right;line-height:1.2;overflow:hidden}
+  .g-name .yr{color:var(--faint);font-size:10.5px;display:block}
+  .g-track{position:relative;height:18px;background:rgba(255,255,255,.025);border-radius:4px}
+  .g-bar{position:absolute;left:0;top:0;bottom:0;border-radius:4px;min-width:2px}
+  .g-lbl{font-size:11px;color:var(--muted);white-space:nowrap}
+  .g-lbl b{color:var(--text);font-weight:700}
+  .g-axis{display:grid;grid-template-columns:235px 1fr 190px;gap:10px;margin-bottom:6px}
+  .g-axis .ax{position:relative;height:16px}
+  .g-axis .tick{position:absolute;font-size:10px;color:var(--faint);transform:translateX(-50%);white-space:nowrap}
+  @media(max-width:820px){.g-row,.g-axis{grid-template-columns:150px 1fr 130px}.g-name{font-size:10.5px}.g-lbl{font-size:9.5px}}
+  /* Tables */
+  .controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;align-items:center}
+  .chipbtn{font-size:12.5px;font-weight:600;border:1px solid var(--border2);background:var(--panel);color:var(--muted);border-radius:999px;padding:7px 15px;cursor:pointer;transition:all .15s}
+  .chipbtn:hover{color:var(--text)}
+  .chipbtn.on{background:var(--teal);border-color:var(--teal);color:#06281f}
+  .chipbtn.on.blue{background:var(--blue);border-color:var(--blue);color:#0a1c38}
+  .search{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--border2);border-radius:10px;padding:9px 14px;color:var(--text);font-size:13.5px;outline:none}
+  .search:focus{border-color:var(--teal)}
+  .tablewrap{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--panel2)}
+  table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+  thead th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:700;padding:12px 10px;background:var(--panel);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:2}
+  tbody td{padding:12px 10px;border-bottom:1px solid var(--border);vertical-align:top;overflow-wrap:break-word}
+  tbody tr.row{cursor:pointer;transition:background .12s}
+  tbody tr.row:hover{background:rgba(90,162,255,.05)}
+  .namecell{font-weight:700}
+  .namecell .parent{display:block;font-weight:400;font-size:11.5px;color:var(--muted)}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:999px;line-height:1.3}
+  .pill.denovo{background:rgba(90,162,255,.14);color:#9cc2ff}
+  .pill.trust{background:rgba(45,212,191,.13);color:#7ce8da}
+  .pill.conversion{background:rgba(180,140,255,.14);color:#d0b8ff}
+  .pill.other{background:rgba(147,160,184,.16);color:#c3cddb}
+  .st{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;line-height:1.25;flex-wrap:wrap}
+  .st .d{width:8px;height:8px;border-radius:50%;flex:none}
+  .st.open{color:var(--green)} .st.open .d{background:var(--green);box-shadow:0 0 8px var(--green)}
+  .st.final{color:#63e6be} .st.final .d{background:#63e6be}
+  .st.conditional{color:var(--gold)} .st.conditional .d{background:var(--gold)}
+  .st.pending{color:var(--blue)} .st.pending .d{background:var(--blue)}
+  .st.withdrawn{color:var(--red)} .st.withdrawn .d{background:var(--red)}
+  .st.lapsed{color:#c98a8a} .st.lapsed .d{background:#c98a8a}
+  .dt{font-size:12px;color:var(--muted);line-height:1.35}
+  .days{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .cellinks{display:flex;flex-direction:column;gap:4px}
+  .cellinks a{font-size:11.5px;font-weight:600;overflow-wrap:break-word}
+  .nolink{font-size:12px;color:var(--faint)}
+  tr.detail td{background:rgba(45,212,191,.04);border-bottom:1px solid var(--border)}
+  .detailbox{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;padding:6px 4px}
+  @media(max-width:760px){.detailbox{grid-template-columns:1fr}}
+  .detailbox p{font-size:13.5px;color:var(--muted)}
+  .detailbox p b{color:var(--text)}
+  .minimetrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .metric{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:10px 12px}
+  .metric .v{font-size:16px;font-weight:800;letter-spacing:-.01em}
+  .metric .v.neg{color:var(--red)}
+  .metric .k{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
+  .scrollcue{overflow-x:auto}
+  .count-lbl{font-size:12.5px;color:var(--faint)}
+  /* Call report table */
+  .crtable{font-size:13px}
+  .crtable td.num, .crtable th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .neg{color:var(--red)}
+  .hist-tag{font-size:10px;color:var(--faint);border:1px solid var(--border2);border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:middle}
+  /* People table */
+  .ptable{font-size:12.5px}
+  .ptable td{line-height:1.45}
+  .ptable .p-app{font-weight:700}
+  .ptable .p-app .parent{display:block;font-weight:400;font-size:11px;color:var(--muted)}
+  .ppl a{color:var(--text);border-bottom:1px dotted var(--border2)}
+  .ppl a:hover{color:var(--teal);border-color:var(--teal);text-decoration:none}
+  .role-lbl{color:var(--faint);font-size:10px;text-transform:uppercase;letter-spacing:.05em}
+  .none{color:var(--faint);font-size:11.5px}
+  .insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+  .insight{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:18px;padding:22px}
+  .insight .n{font-size:13px;font-weight:800;color:var(--teal);letter-spacing:.1em}
+  .insight h4{font-size:16px;font-weight:800;margin:8px 0 8px;letter-spacing:-.01em}
+  .insight p{font-size:13.5px;color:var(--muted)}
+  .method{background:var(--panel2);border:1px solid var(--border);border-radius:18px;padding:26px;font-size:13.5px;color:var(--muted)}
+  .method h3{color:var(--text);font-size:16px;margin-bottom:10px}
+  .method ul{margin:8px 0 8px 20px}
+  .method li{margin-bottom:6px}
+  .srclinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .lnk{font-size:12px;font-weight:600;border:1px solid var(--border2);border-radius:8px;padding:6px 11px;color:var(--text);background:rgba(255,255,255,.03);display:inline-block}
+  .lnk:hover{border-color:var(--teal);color:var(--teal);text-decoration:none}
+  footer{border-top:1px solid var(--border);padding:34px 0 60px;color:var(--faint);font-size:12.5px}
+  .sharebar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
+  .sharebtn{display:inline-flex;align-items:center;gap:9px;background:#0a66c2;color:#fff;font-weight:700;font-size:13.5px;border-radius:10px;padding:11px 20px;border:none;cursor:pointer}
+  .sharebtn:hover{background:#084d94;text-decoration:none;color:#fff}
+  .copybtn{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border2);color:var(--text);font-weight:600;font-size:13px;border-radius:10px;padding:11px 18px;cursor:pointer}
+  .copybtn:hover{border-color:var(--teal);color:var(--teal)}
+  .toplink{position:fixed;bottom:22px;right:22px;background:var(--panel);border:1px solid var(--border2);color:var(--muted);border-radius:10px;padding:9px 13px;font-size:12px;z-index:50}
+  @media print{.controls,.sharebar,.toplink{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">OCC Charter Applications · Status Tracker · July 2019 – July 2026</span>
+    <h1>National bank &amp; trust charter applications to the OCC:<br>status, timelines, people, and call-report data</h1>
+    <p class="sub">A factual tracker of <b>56 novel charter applications</b> filed with the Office of the Comptroller of the Currency over the past seven years — de novo full-service national banks, de novo national trust banks, conversions to national charters, and digital-asset licensing applications. Each entry links to its OCC source document and, where filed, its FFIEC call report.</p>
+    <div class="badges">
+      <span class="badge">📅 Data as of <b>July 19, 2026</b></span>
+      <span class="badge">🏛️ Sources: <b>OCC · FFIEC CDR · FDIC</b></span>
+      <span class="badge">🔍 <b>56</b> applications tracked</span>
+      <span class="badge">📄 Q1 2026 call reports: <b>8 banks</b></span>
+    </div>
+    <div class="sharebar">
+      <a class="sharebtn" id="liShare" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+        Share on LinkedIn</a>
+      <button class="copybtn" id="copyLink">🔗 Copy link</button>
+      <span id="copyMsg" style="font-size:12.5px;color:var(--teal);display:none">Link copied ✓</span>
+    </div>
+  </div>
+</header>
+
+<section id="kpis">
+  <div class="wrap">
+    <div class="kpis" id="kpiRow"></div>
+  </div>
+</section>
+
+<section id="days">
+  <div class="wrap">
+    <div class="sec-title"><h2>Days from filing to OCC conditional approval</h2><span class="tag">All applications start at zero</span></div>
+    <p class="sec-sub">Each bar starts at the application's filing date (day zero) and runs to the date the OCC granted <b>preliminary conditional approval</b> — or, for applications still in review, to today (blue). Withdrawn and lapsed applications run to their withdrawal/expiration date. "Conditional approval" and "preliminary approval" are the <b>same milestone</b>: the OCC's preliminary conditional approval authorizes organizers to raise capital and prepare to open; <b>final approval</b> (the charter itself) comes only after those conditions are met.</p>
+    <div class="card">
+      <h3>Time in the OCC queue, by application</h3>
+      <div class="note">Sorted by filing date · "~" = filing or decision date not fully public, estimated from OCC control-number sequences · hover bars for details</div>
+      <div class="g-axis" id="gAxis"></div>
+      <div class="gantt" id="gantt"></div>
+      <div class="legend">
+        <span><i class="sw" style="background:#3fce8d"></i>Conditionally approved (date labeled)</span>
+        <span><i class="sw" style="background:#5aa2ff"></i>Still pending (through Jul 19, 2026)</span>
+        <span><i class="sw" style="background:#f27070"></i>Withdrawn</span>
+        <span><i class="sw" style="background:#c98a8a"></i>Cond. approval lapsed (never opened)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="charts">
+  <div class="wrap">
+    <div class="sec-title"><h2>Filings over time</h2><span class="tag">July 2019 – July 2026</span></div>
+    <p class="sec-sub">The OCC received on average <b>fewer than four charter applications per year from 2011 through 2024</b> (per Comptroller Gould). Eighteen de novo applications were filed in 2025 — a number equal to the previous four years combined — and eighteen more were filed in the first half of 2026.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Applications filed per month</h3>
+        <div class="note">Stacked by charter type · approximate filing months flagged † in the tracker table</div>
+        <div id="barChart" class="scrollcue"></div>
+        <div class="legend">
+          <span><i class="sw" style="background:#5aa2ff"></i>Full-service de novo</span>
+          <span><i class="sw" style="background:#2dd4bf"></i>National trust (de novo)</span>
+          <span><i class="sw" style="background:#b48cff"></i>Conversion</span>
+          <span><i class="sw" style="background:#93a0b8"></i>Other licensing</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Status mix by charter type</h3>
+        <div class="note">As of Jul 19, 2026</div>
+        <div id="stackChart"></div>
+        <div class="legend">
+          <span><i class="sw" style="background:#3fce8d"></i>Granted / operating</span>
+          <span><i class="sw" style="background:#f0b64c"></i>Conditionally approved</span>
+          <span><i class="sw" style="background:#5aa2ff"></i>Pending review</span>
+          <span><i class="sw" style="background:#f27070"></i>Withdrawn / lapsed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="callreports">
+  <div class="wrap">
+    <div class="sec-title"><h2>Q1 2026 call-report data (March 31, 2026)</h2><span class="tag">FFIEC CDR · via FDIC BankFind</span></div>
+    <p class="sec-sub">Every FDIC-insured institution files a quarterly Report of Condition &amp; Income (call report). Of the 56 tracked applications, <b>eight</b> involve insured institutions with a Q1 2026 call report on file — the newly chartered Erebor Bank plus seven banks that hold charters from earlier approvals or conversions. Uninsured national trust banks (Circle, Ripple, etc.) are not FDIC-insured and generally do not appear in the public FFIEC CDR database; the OCC reports them separately on its active trust-bank list.</p>
+    <div class="tablewrap scrollcue">
+      <table class="crtable" id="crTable">
+        <thead><tr>
+          <th>Institution</th><th>Charter action (window)</th><th class="num">Total assets</th><th class="num">Deposits</th><th class="num">Gross loans</th><th class="num">Equity capital</th><th class="num">Net income (Q1)</th><th class="num">ROA (Q1)</th><th>Call report</th>
+        </tr></thead>
+        <tbody id="crBody"></tbody>
+        <tfoot id="crFoot"></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="tracker">
+  <div class="wrap">
+    <div class="sec-title"><h2>Application tracker</h2><span class="tag">56 applications · click any row for business purpose &amp; links</span></div>
+    <p class="sec-sub">Statuses as of July 19, 2026. "Days" = calendar days from filing to OCC conditional approval where both dates are public (~ = approximate). Entries marked <span class="hist-tag">2019–23</span> predate the original 36-month window and are included for the extended seven-year view.</p>
+    <div class="controls">
+      <button class="chipbtn on" data-type="all">All types</button>
+      <button class="chipbtn" data-type="denovo">Full-service de novo</button>
+      <button class="chipbtn" data-type="trust">National trust (de novo)</button>
+      <button class="chipbtn" data-type="conversion">Conversion</button>
+      <button class="chipbtn" data-type="other">Other licensing</button>
+      <span style="width:1px;height:22px;background:var(--border2)"></span>
+      <button class="chipbtn blue on" data-status="all">All statuses</button>
+      <button class="chipbtn blue" data-status="open">Granted / operating</button>
+      <button class="chipbtn blue" data-status="conditional">Conditional</button>
+      <button class="chipbtn blue" data-status="pending">Pending</button>
+      <button class="chipbtn blue" data-status="withdrawn">Withdrawn / lapsed</button>
+      <input class="search" id="q" placeholder="Search name, parent, city…">
+      <span class="count-lbl" id="countLbl"></span>
+    </div>
+    <div class="tablewrap scrollcue">
+      <table>
+        <colgroup><col style="width:20%"><col style="width:11%"><col style="width:9%"><col style="width:9%"><col style="width:12%"><col style="width:11%"><col style="width:8%"><col style="width:10.5%"><col style="width:9.5%"></colgroup>
+        <thead><tr>
+          <th>Institution</th><th>Charter type</th><th>HQ</th><th>Filed</th><th>Status</th><th>Status date</th><th>Days→CA</th><th>OCC source</th><th>Call report</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="people">
+  <div class="wrap">
+    <div class="sec-title"><h2>Named officers, directors &amp; counsel</h2><span class="tag">As stated in applications &amp; OCC decisions</span></div>
+    <p class="sec-sub">Names below are taken from the "Organizers, Directors and Officers" tables in OCC decision letters and from the public volumes of the applications themselves. Each name links to a LinkedIn people search for that individual. Cells marked "—" mean the names are not part of the public record released to date (e.g., applications with no published public volume yet).</p>
+    <div class="controls">
+      <input class="search" id="pq" placeholder="Search a person, firm, or application…">
+      <span class="count-lbl" id="pCountLbl"></span>
+    </div>
+    <div class="tablewrap scrollcue">
+      <table class="ptable">
+        <colgroup><col style="width:15%"><col style="width:13%"><col style="width:11%"><col style="width:11%"><col style="width:19%"><col style="width:17%"><col style="width:14%"></colgroup>
+        <thead><tr>
+          <th>Application</th><th>CEO</th><th>CFO</th><th>CCO</th><th>Directors</th><th>Other named officers</th><th>Outside counsel</th>
+        </tr></thead>
+        <tbody id="pbody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="insights">
+  <div class="wrap">
+    <div class="sec-title"><h2>Key facts from the data</h2><span class="tag">Sourced &amp; dated</span></div>
+    <p class="sec-sub"></p>
+    <div class="insights">
+      <div class="insight"><div class="n">01 · VOLUME</div><h4>18 filings in 2025 = prior four years combined</h4><p>Eighteen de novo charter applications were filed with the OCC in 2025 (Banking Dive), matching the total for 2021–2024. Eighteen more were filed in H1 2026. From 2011–2024 the OCC averaged fewer than four charter applications per year (Comptroller Gould).</p></div>
+      <div class="insight"><div class="n">02 · SPEED</div><h4>Conditional approvals now run ~4 months</h4><p>Since September 2025, the median time from filing to conditional approval is roughly 120–130 days (VALT 120, Nubank 121, Mercury and Erebor 126, Morgan Stanley 120). Varo's 2018 preliminary approval took ~430 days; Coinbase (181) and Sony's Connectia (269) are the recent outliers.</p></div>
+      <div class="insight"><div class="n">03 · MIX</div><h4>Trust charters outnumber full-service 2-to-1</h4><p>Of 56 tracked applications: 23 are de novo national trust banks (uninsured, custody/fiduciary — no deposit-taking), 12 full-service de novo banks, 11 conversions, 2 other digital-asset licensing filings, and 8 pre-2024 applications (3 now operating, 3 withdrawn, 2 lapsed).</p></div>
+      <div class="insight"><div class="n">04 · CALL REPORTS</div><h4>8 filers hold $194.7B in combined assets</h4><p>Only insured, operating banks file FFIEC call reports. The eight Q1 2026 filers in this dataset hold $194.7B of assets — $122.3B (63%) at UBS Bank USA alone. Erebor, the only newly-opened de novo, shows $1.70B of assets and zero loans seven weeks after opening.</p></div>
+      <div class="insight"><div class="n">05 · PIPELINE</div><h4>20 approved-and-waiting, 18 still in queue</h4><p>Twenty applicants hold conditional approvals and must still raise capital, pass pre-opening exams, and (for full-service banks) win FDIC insurance before opening. Eighteen applications remain undecided — Wise's is the oldest, pending 397 days as of Jul 19, 2026.</p></div>
+      <div class="insight"><div class="n">06 · PRECEDENT</div><h4>Two earlier conditional approvals expired unused</h4><p>Paxos (CA April 2021) and Protego (CA February 2021) never opened within their approval windows and their approvals lapsed. Both refiled in 2025 and were re-approved on December 12, 2025 — illustrating that a conditional approval is not a charter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="method">
+      <h3>Methodology, definitions &amp; sources</h3>
+      <ul>
+        <li><b>Scope.</b> Novel charter activity filed with the OCC July 2019 – July 2026: de novo full-service national banks, de novo national trust banks, state/thrift→national conversions, CEBA credit-card banks, and digital-asset licensing applications, plus the notable pre-2024 fintech applications (Varo, SoFi, Agility, Anchorage, Paxos, Protego, Figure, Oportun). Routine mergers, branches and holding-company reorganizations are excluded.</li>
+        <li><b>Approval stages.</b> "Preliminary approval" and "conditional approval" are the same stage: the OCC's preliminary conditional approval lets organizers raise capital and prepare the bank, but does not allow it to open. Final approval (charter issuance) follows completion of conditions and, for insured banks, FDIC insurance. Conditional approvals typically expire in 12–18 months if unused.</li>
+        <li><b>Dates.</b> Filing dates are from OCC control numbers, decision letters, and the OCC digital-assets docket. Where the OCC has not published a receipt date, the month is estimated from control-number sequences and marked ~ / †.</li>
+        <li><b>People.</b> Names are transcribed from the "Organizers, Directors and Officers" tables in OCC decision letters and the public volumes of applications. Names link to LinkedIn people-search results (direct profile URLs are not independently verified).</li>
+        <li><b>Call-report data.</b> FFIEC CDR / FDIC BankFind, quarter ended 3/31/2026, retrieved July 19, 2026. Uninsured national trust banks generally do not appear in the public CDR database; the OCC reports them on its active trust-bank list.</li>
+        <li><b>Not investment or legal advice.</b> Unofficial tracker compiled from public sources; statuses change without notice — verify against OCC records.</li>
+      </ul>
+      <div class="srclinks">
+        <a class="lnk" href="https://www.occ.gov/topics/charters-and-licensing/interpretations-and-decisions/index-interpretations-and-decisions.html" target="_blank" rel="noopener">OCC Interpretations &amp; Decisions ↗</a>
+        <a class="lnk" href="https://apps.occ.gov/CAS/" target="_blank" rel="noopener">OCC Corporate Applications Search ↗</a>
+        <a class="lnk" href="https://www.occ.gov/topics/charters-and-licensing/digital-assets-licensing-applications/index-digital-assets-licensing-applications.html" target="_blank" rel="noopener">OCC digital-assets docket ↗</a>
+        <a class="lnk" href="https://cdr.ffiec.gov/public/" target="_blank" rel="noopener">FFIEC CDR public data ↗</a>
+        <a class="lnk" href="https://banks.data.fdic.gov/bankfind-suite/bankfind" target="_blank" rel="noopener">FDIC BankFind ↗</a>
+        <a class="lnk" href="https://www.americanbanker.com/news/fintechs-asking-for-and-receiving-bank-charters-in-2026" target="_blank" rel="noopener">American Banker charter tracker ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>OCC Charter Applications — Status &amp; Call Report Tracker</b> · July 2019 – July 2026 · Data as of July 19, 2026.</p>
+    <p style="margin-top:6px">Research, data pipeline, visualization and copy generated by Kimi K3 (Moonshot AI). All underlying data: OCC, FFIEC, FDIC and linked public reporting.</p>
+  </div>
+</footer>
+<a class="toplink" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Top</a>
+<script>
+const OCC_IA="https://www.occ.gov/topics/charters-and-licensing/interpretations-and-decisions";
+const DIGI="https://www.occ.gov/topics/charters-and-licensing/digital-assets-licensing-applications/index-digital-assets-licensing-applications.html";
+const DPDF="https://www.occ.gov/topics/charters-and-licensing/digital-assets-licensing-applications/";
+const CAS="https://apps.occ.gov/CAS/";
+const CDR="https://cdr.ffiec.gov/public/ManageFacsimiles.aspx";
+const ABTRACK="https://www.americanbanker.com/news/fintechs-asking-for-and-receiving-bank-charters-in-2026";
+const TRUSTLIST="https://www.occ.treas.gov/topics/charters-and-licensing/financial-institution-lists/trust-by-name.pdf";
+const BF="https://banks.data.fdic.gov/bankfind-suite/bankfind/details/";
+const TRUSTCALL={label:"No public CDR report",note:"Uninsured national trust bank — not FDIC-insured and generally not in the public FFIEC CDR database; the OCC reports it on its active trust-bank list once operating.",links:[{label:"OCC trust-bank list",url:TRUSTLIST}]};
+const PENDCALL={label:"No filing — pending",note:"Application pending; no bank exists to file a call report.",links:[]};
+const NOTOPEN={label:"Not filed — not yet open",note:"Conditionally approved; call reports begin once the bank opens for business.",links:[{label:"FFIEC CDR (once open)",url:CDR}]};
+
+const APPS=[
+/* ===== FULL-SERVICE DE NOVO — 2025/26 ===== */
+{n:"Erebor Bank, N.A.",sn:"Erebor",parent:"Erebor Group — P. Luckey, Founders Fund, 8VC",type:"denovo",hq:"Columbus, OH",
+ filed:"2025-06-11",status:"open",statusLabel:"Granted — operating",statusDate:"Final charter Feb 6, 2026",ca:"2025-10-15",
+ occ:[{label:"CA #1348 (PDF)",url:OCC_IA+"/2025/ca1348.pdf"},{label:"OCC news release",url:"https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-101.html"}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"First call report filed for Q1 2026 (3/31/2026).",links:[{label:"FFIEC CDR",url:CDR},{label:"FDIC BankFind",url:BF+"59378"}],
+  m:[{k:"Total assets",v:"$1.70B"},{k:"Deposits",v:"$1.10B"},{k:"Equity",v:"$600.6M"},{k:"Net income (Q1)",v:"–$6.0M",neg:true},{k:"Gross loans",v:"$0"},{k:"ROA (Q1)",v:"–1.41%",neg:true}]},
+ purpose:"Full-service national bank for technology companies in AI, crypto, defense and manufacturing: deposits, lending and payments, plus digital-asset services. (CA #1348)",
+ people:{ceo:"Owen Rapaport · Jacob Hirshman (co-CEOs)",cfo:"—",cco:"—",dirs:["Palmer Luckey","Trevor Capozza","Michael Hagedorn","Michael Mosier","Owen Rapaport","Jacob Hirshman"],others:[],counsel:"Skadden Arps — Wendy Goldberg, Mark Chorazak, Nate Balk",org:"Erebor Bank"}},
+
+{n:"Nubank, N.A.",sn:"Nubank",parent:"Nu Holdings (Brazil) — NYSE: NU",type:"denovo",hq:"McLean, VA",
+ filed:"2025-09-30",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Jan 29, 2026",ca:"2026-01-29",
+ occ:[{label:"CA #1362 (PDF)",url:OCC_IA+"/2026/ca1362.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Full-service digital national bank: deposit and lending products via electronic channels, plus digital-asset custody and related services. Initial capital ≥ $504M; tier-1 leverage ≥ 11%. (CA #1362)",
+ people:{ceo:"Cristina Junqueira",cfo:"Kenneth Freije",cco:"—",dirs:["Cristina Junqueira","Roberto Campos Neto (Chairman)","Youssef Lahrech","Brian Brooks","Kelley Morrell"],others:["Tyler Horn — Chief Risk Officer","Jeremy Selesner — Chief Credit Officer","Christian Romney — CTO","David Velez — Organizer","Samuel Dulik — Organizer"],counsel:"—",org:"Nubank"}},
+
+{n:"Mercury Bank, N.A.",sn:"Mercury",parent:"Mercury Technologies",type:"denovo",hq:"Salt Lake City, UT",
+ filed:"2025-12-19",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Apr 24, 2026",ca:"2026-04-24",
+ occ:[{label:"CD #1372 (PDF)",url:OCC_IA+"/2026/cd1372.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Full-service national bank for startups and SMBs: checking/savings, charge cards, lending and payments, migrating customers from partner banks. Initial capital ≥ $300M. (CD #1372)",
+ people:{ceo:"Jonathan Auxier",cfo:"Daniel Kang",cco:"Steven Pearlman",dirs:["Jonathan Auxier","Immad Akhund","Tim Mayopoulos","Lewis Goodwin"],others:["Kayce Seifert — General Counsel","Chase Little — Chief Credit Officer"],counsel:"Skadden Arps — Nate Balk",org:"Mercury Bank"}},
+
+{n:"VALT Bank, N.A.",sn:"VALT",parent:"VALT Investor Group — ex-U.S. Bank executives",type:"denovo",hq:"Eagle, ID",
+ filed:"2025-11-13",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Mar 13, 2026",ca:"2026-03-13",
+ occ:[{label:"CD #1368 (PDF)",url:OCC_IA+"/2026/cd1368.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Fully digital bank for small and midsized businesses: credit, deposits, cash management and advisory services. Initial capital ≥ $25M; tier-1 leverage ≥ 9%. (CD #1368)",
+ people:{ceo:"Matt Gediman (President & CEO)",cfo:"Geri Bullard",cco:"—",dirs:["Matt Gediman","John Elmore (Chairman)","Ross Carey","Dana Johnson","Kim Hoyt"],others:["Michael Luebbers — Chief Credit Officer","Edward Chuang — CTO","John Packham — Chief Risk Officer"],counsel:"— (organizing consultant: Carpenter & Company — Maryam Hamzeh)",org:"VALT Bank"}},
+
+{n:"Augustus Bank, N.A.",sn:"Augustus",parent:"Augustus (fka Ivy) — backed by Valar Ventures",type:"denovo",hq:"Dallas, TX",
+ filed:"2025-12-18",status:"conditional",statusLabel:"Conditionally approved",statusDate:"May 8, 2026",ca:"2026-05-08",
+ occ:[{label:"CD #1374 (PDF)",url:OCC_IA+"/2026/cd1374.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Full-service insured national bank: deposits and lending incl. tokenized deposits, payments and treasury, digital-asset services, foreign correspondent banking, BIN sponsorship, and a stablecoin subsidiary. Paid-in capital ≥ $52.5M. (CD #1374)",
+ people:{ceo:"Ferdinand Dabitz",cfo:"Joe Schenone (also listed: Kyle Steed)",cco:"Benjamin Alexander (also BSA Officer)",dirs:["Ferdinand Dabitz","Greg Quarles","Bruce Wallace"],others:["Greg Quarles — President","Julius Ahr — Chief of Staff","Simon Wimmer — CTO","Andrew Riggs — Chief Credit Officer"],counsel:"Skadden Arps — Mark Chorazak",org:"Augustus Bank"}},
+
+{n:"RockPointBank, N.A.",sn:"RockPointBank",parent:"RockPoint Bancshares (existing bank, est. 2021)",type:"denovo",hq:"Chattanooga, TN",
+ filed:"2025-12-22",fApprox:true,status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,call:PENDCALL,
+ purpose:"New national bank charter under a holding company (full service), sharing the name of Chattanooga's RockPoint Bank (chartered 2021) — a holding-company rechartering. No public decision as of Jul 19, 2026.",
+ people:null},
+
+{n:"bunq U.S. Bank, N.A. — 1st application",sn:"bunq (1st)",parent:"bunq (Netherlands)",type:"denovo",hq:"New York, NY",
+ filed:"2023-04-03",status:"withdrawn",statusLabel:"Withdrawn",statusDate:"Jan 30, 2024",ca:null,end:"2024-01-30",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"—",note:"Withdrawn before approval; no bank was chartered.",links:[]},
+ purpose:"Proposed full-service national bank by the Dutch neobank. Withdrawn after ~10 months in review; bunq refiled in January 2026.",
+ people:null},
+
+{n:"bunq U.S. Bank, N.A. — refiling",sn:"bunq (refile)",parent:"bunq (Netherlands)",type:"denovo",hq:"New York, NY",
+ filed:"2026-01-07",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,call:PENDCALL,
+ purpose:"Second application for a full-service national bank targeting internationally mobile U.S. customers.",
+ people:null},
+
+{n:"Revolut Bank US, N.A.",sn:"Revolut",parent:"Revolut (UK)",type:"denovo",hq:"Stamford, CT",
+ filed:"2026-03-04",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DPDF+"revolut-bank.pdf",call:PENDCALL,
+ purpose:"Full-service digital national bank: DDA/savings, Pockets, personal loans and credit cards, business credit, FX, digital-asset buy/sell/hold incl. stablecoins and staking, and trading/wealth tools; migrate existing U.S. customers from partner banks. (Public application volume, Mar 4, 2026)",
+ people:{ceo:"— (not named in public volume)",cfo:"—",cco:"—",dirs:["— (not in public volume)"],others:["Organizers: Cetin Duransoy, Siddhartha Jajodia, Ibrahim Dusi, Josh van Hulst, Bruce Wallace","Contact: Dan Ryan — Head of Legal, Revolut Technologies"],counsel:"Sullivan & Cromwell — C. Andrew Gerlach",org:"Revolut"}},
+
+{n:"Upstart Bank, N.A.",sn:"Upstart",parent:"Upstart Holdings — Nasdaq: UPST",type:"denovo",hq:"Delaware",
+ filed:"2026-03-26",fApprox:true,status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,call:PENDCALL,
+ purpose:"Proposed branchless national bank to originate and hold loans from Upstart's AI lending marketplace.",
+ people:{ceo:"Annie Delgado (per company announcement)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"—",org:"Upstart"}},
+
+{n:"OpenReserve Bank, N.A.",sn:"OpenReserve",parent:"OpenReserve organizers",type:"denovo",hq:"Salt Lake City, UT",
+ filed:"2026-04-13",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed full-service national bank offering traditional banking products on blockchain infrastructure (tokenized deposits, on-chain settlement), plus a ReserveUSD stablecoin subsidiary.",
+ people:null},
+
+{n:"Mission Lane Bank, N.A.",sn:"Mission Lane",parent:"Mission Lane",type:"denovo",hq:"—",
+ filed:"2026-04-15",fApprox:true,status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,call:PENDCALL,
+ purpose:"Proposed CEBA limited-purpose credit-card national bank — the first CEBA credit-card charter application to the OCC in roughly two decades.",
+ people:null},
+
+/* ===== NATIONAL TRUST DE NOVO — 2025/26 ===== */
+{n:"First National Digital Currency Bank, N.A. (Circle National Trust)",sn:"Circle / FNDCB",parent:"Circle Internet Group — NYSE: CRCL",type:"trust",hq:"New York, NY",
+ filed:"2025-06-30",status:"final",statusLabel:"Granted — final approval",statusDate:"Final approval Jul 2026",ca:"2025-12-12",
+ occ:[{label:"CA #1356 (PDF)",url:OCC_IA+"/2026/ca1356.pdf"},{label:"OCC news release",url:"https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-125.html"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: manage USDC reserves (directed), serve as collateral trustee for USDC holders (fiduciary), and provide digital-asset custody for affiliates. Min. tier-1 capital $6.05M. Authorized to open on or after Jul 10, 2026. (CA #1356)",
+ people:{ceo:"Daniel Fishman (President & Treasurer)",cfo:"—",cco:"Mandeep Walia (Chief Compliance & Risk Officer)",dirs:["Daniel Fishman","Tamara Schulz","Heath Tarbert","Amy Friend","Alan Cohen"],others:["Brett Schroeder — Chief Legal Officer & Secretary","Rawan Abdelrazek — COO & Chief Trust Officer","Marlys Rodgers — CISO","Contact: Kevin Murphy — Assistant GC, Circle"],counsel:"—",org:"Circle"}},
+
+{n:"Ripple National Trust Bank",sn:"Ripple",parent:"Ripple Labs",type:"trust",hq:"New York, NY",
+ filed:"2025-07-02",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Dec 12, 2025",ca:"2025-12-12",
+ occ:[{label:"CA #1359 (PDF)",url:OCC_IA+"/2026/ca1359.pdf"},{label:"OCC news release",url:"https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-125.html"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: segregated RLUSD reserve management (directed), collateral trustee for RLUSD holders (fiduciary), digital-asset custody for affiliates and institutional customers. Min. tier-1 $11.7M. (CA #1359)",
+ people:{ceo:"— (not stated in public letter)",cfo:"—",cco:"—",dirs:["Jack McDonald","John Zavaglia","Stuart Alderoty","Timothy Keaney","David Puth"],others:["Contact: Brian Spahn — Senior Director, Regulatory Compliance"],counsel:"—",org:"Ripple"}},
+
+{n:"Bridge National Trust Bank",sn:"Bridge (Stripe)",parent:"Bridge — a Stripe company",type:"trust",hq:"New York, NY",
+ filed:"2025-10-15",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Feb 12, 2026",ca:"2026-02-12",
+ occ:[{label:"CD #1365 (PDF)",url:OCC_IA+"/2026/cd1365.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: issue USD stablecoins (primary issuer of xUSD), fiduciary digital-asset custody (primarily retail), crypto buy/sell/convert orchestration, stablecoin reserve management, collateral trustee. Min. tier-1 $45M. (CD #1365)",
+ people:{ceo:"Zachary Abrams (letter lists: Organizer, Director)",cfo:"—",cco:"—",dirs:["Zachary Abrams","Paris Cribben","Michael Lempres","Sara Wardell-Smith","Eric Weingarten"],others:["Paris Cribben — President & Trust Officer","Eric Weingarten — Chief Product Officer"],counsel:"— (letter addressed to Paris Cribben, General Counsel, Bridge)",org:"Bridge"}},
+
+{n:"Foris DAX National Trust Bank (Crypto.com)",sn:"Foris DAX (Crypto.com)",parent:"Foris DAX / Crypto.com",type:"trust",hq:"Chicago, IL",
+ filed:"2025-10-24",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Feb 20, 2026",ca:"2026-02-20",
+ occ:[{label:"CD #1367 (PDF)",url:OCC_IA+"/2026/cd1367.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: fiduciary custody for digital assets and USD, institutional digital-asset trade settlement, staking, customer-directed riskless-principal exchange. No stablecoin issuance. Min. tier-1 $15M. (CD #1367)",
+ people:{ceo:"Joseph Anzures (President)",cfo:"—",cco:"Kevin Dan",dirs:["Joseph Anzures","Patrick Brady","Matthew David","James Grabow","Andrew Snyder"],others:["Andrew Snyder — Trust Officer","Duncan DeVille — BSA/Sanctions Officer","Evan Horne — Information Security Officer","Rafael De Marco E Melo — Organizer"],counsel:"— (contact: Daniel Nunez Cohen)",org:"Crypto.com"}},
+
+{n:"National Digital Trust Company",sn:"Nat'l Digital Trust (Protego)",parent:"Protego",type:"trust",hq:"Seattle, WA",
+ filed:"2025-06-15",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Feb 13, 2026",ca:"2026-02-13",
+ occ:[{label:"CD #1366 (PDF)",url:OCC_IA+"/2026/cd1366.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: custody, trading, lending/borrowing and issuer-services (tokenization) platforms; staking-as-a-service, protocol governance and treasury management (fiduciary). Min. tier-1 $15M. Protego's second application (2021 CA lapsed). (CD #1366)",
+ people:{ceo:"Greg Gilman",cfo:"—",cco:"—",dirs:["— (officer table not in public letter)"],others:[],counsel:"—",org:"Protego"}},
+
+{n:"Coinbase National Trust Company",sn:"Coinbase",parent:"Coinbase Global — Nasdaq: COIN",type:"trust",hq:"New York, NY",
+ filed:"2025-10-03",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Apr 2, 2026",ca:"2026-04-02",
+ occ:[{label:"CD #1370 (PDF)",url:OCC_IA+"/2026/cd1370.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust company: fiduciary digital-asset custody (primarily institutional), transactional services for custody customers, finder access to affiliate staking/prime trading/prime financing; migrates Coinbase Custody Trust Co. (NYDFS) business over 3 years. Min. tier-1 $60M. (CD #1370)",
+ people:{ceo:"Rick Schonberg",cfo:"Alesia Haas",cco:"—",dirs:["Rick Schonberg","Alesia Haas","Gregory Tusar","Paul Grewal","Dana Wagner","Brian Dong","Robert Easton"],others:[],counsel:"Covington & Burling — Michael Nonaka",org:"Coinbase"}},
+
+{n:"Interactive National Trust Bank",sn:"Interactive (IBKR)",parent:"Interactive Brokers — Nasdaq: IBKR",type:"trust",hq:"Greenwich, CT",
+ filed:"2025-12-20",status:"conditional",statusLabel:"Conditionally approved",statusDate:"May 5, 2026",ca:"2026-05-05",
+ occ:[{label:"CD #1373 (PDF)",url:OCC_IA+"/2026/cd1373.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: fiduciary custody for '40-Act mutual funds/ETFs, corporate actions processing, cash sweep, custody for affiliate, non-fiduciary securities lending. Paid-in capital ≥ $10M. (CD #1373)",
+ people:{ceo:"Bruce Turner (Chairman & CEO)",cfo:"Paul Brody",cco:"Jonathan Gelman",dirs:["Bruce Turner","Christopher Uzpen","Stacy Millus","William Swift Jr.","Douglas Madonia"],others:["Christopher Uzpen — Trust Officer","Alamgir Hasan — Chief Risk Officer","Nooruddin Tharani — BSA/AML Compliance Officer"],counsel:"Covington & Burling — Michael Nonaka",org:"Interactive Brokers"}},
+
+{n:"Laser Digital National Trust Bank",sn:"Laser Digital (Nomura)",parent:"Laser Digital — Nomura Group",type:"trust",hq:"New York, NY",
+ filed:"2026-01-27",status:"conditional",statusLabel:"Conditionally approved",statusDate:"May 29, 2026",ca:"2026-05-29",
+ occ:[{label:"CD #1377 (PDF)",url:OCC_IA+"/2026/cd1377.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: fiduciary custody of digital assets, securities and fiat for institutional clients; staking; customer-directed spot trading for custody customers. Min. tier-1 $6.5M. (CD #1377)",
+ people:{ceo:"Purvi Maniar (President)",cfo:"—",cco:"Anna Tse (also BSA Compliance Officer)",dirs:["Purvi Maniar","Steven Ashley (Chairman)","Anna Tse","Darren Burnett","Frank Weigand"],others:[],counsel:"Paul Hastings — Joshua Boehm, Dana Syracuse",org:"Laser Digital"}},
+
+{n:"Morgan Stanley Digital Trust, N.A.",sn:"Morgan Stanley",parent:"Morgan Stanley — NYSE: MS",type:"trust",hq:"Purchase, NY",
+ filed:"2026-02-18",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Jun 18, 2026",ca:"2026-06-18",
+ occ:[{label:"CD #1378 (PDF)",url:OCC_IA+"/2026/cd1378.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: digital-asset custody, purchase/sale/swap/transfer supporting client investment, fiduciary staking, collateral administration for affiliate digital-asset lending. Min. tier-1 $50M. (CD #1378)",
+ people:{ceo:"John Ryan (Chairman & CEO)",cfo:"Elisabeth Fedyna",cco:"John Burns (Head of Non-Financial Risk)",dirs:["John Ryan","Chad Turner","Amanda Kan","Niloofar Howe","Thomas Sargeant"],others:["Chad Turner — President","Amanda Kan — COO","Perren Wong — Chief Trust Officer","Arya Sekhar — Chief Risk Officer","Brian Conroy — Treasurer"],counsel:"— (contact: Priya Bindra, Managing Director)",org:"Morgan Stanley"}},
+
+{n:"Connectia Trust, N.A.",sn:"Connectia (Sony)",parent:"Sony Bank (Sony Group)",type:"trust",hq:"New York, NY",
+ filed:"2025-10-06",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Jul 2, 2026",ca:"2026-07-02",
+ occ:[{label:"CD #1380 (PDF)",url:OCC_IA+"/2026/cd1380.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: USD stablecoin issuance and reserve management (non-fiduciary), custody for selected stablecoins, closed-loop transactions within Sony Group platforms, fiduciary asset management for Sony entities. Min. tier-1 $60M. (CD #1380)",
+ people:{ceo:"Takahito Yamada (also COO, Acting CFO)",cfo:"Takahito Yamada (Acting)",cco:"André Burrell (also Chief Risk Officer)",dirs:["Takahito Yamada","Takafumi Watanabe","Nida Davis","David Forman","Jeffrey Levine"],others:["Yutoku Minanogawa — CISO & CTO","Shigeo Kawauchi — Organizer"],counsel:"Sidley Austin — David Teitelbaum",org:"Sony Connectia"}},
+
+{n:"UKG National Trust Bank",sn:"UKG",parent:"Kronos SaaShr / UKG",type:"trust",hq:"Branchburg, NJ",
+ filed:"2025-10-01",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Jan 22, 2026",ca:"2026-01-22",
+ occ:[{label:"CA #1361 (PDF)",url:OCC_IA+"/2026/ca1361.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: trustee/fiduciary for trusts holding client payroll funds and tax remittances for parent UKG's payroll services. Paid-in capital ≥ $10M. (CA #1361)",
+ people:{ceo:"Nancy Graves (Chairwoman, CEO & President)",cfo:"Matthew Levinson (also Trust Officer)",cco:"Guglielmina Turelli (Chief Risk & Compliance Officer)",dirs:["Nancy Graves","Scott Polakoff","Thomas Grottke","Arlen Shenkman","Peter Staples"],others:["Gregory McHugh — Chief Legal Officer & Secretary","John Messina — CISO"],counsel:"—",org:"UKG"}},
+
+{n:"OneSource Virtual Trust Bank, N.A.",sn:"OneSource Virtual",parent:"OneSource Virtual",type:"trust",hq:"Dallas, TX",
+ filed:"2025-05-15",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Sep 12, 2025",ca:"2025-09-12",
+ occ:[{label:"CA #1346 (PDF)",url:OCC_IA+"/2025/ca1346.pdf"}],appPdf:null,call:TRUSTCALL,
+ purpose:"National trust bank: trustee/fiduciary for trusts established by affiliate OneSource Virtual, Inc. (HR/payroll services). Paid-in capital ≥ $7.5M. (CA #1346)",
+ people:{ceo:"— (officer table not in public letter)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"DLA Piper — Jeffrey Hare",org:"OneSource Virtual"}},
+
+{n:"Alvarez & Marsal Trust Company, N.A.",sn:"A&M Trust",parent:"A&M Private Wealth Partners",type:"trust",hq:"Wilmington, DE",
+ filed:"2025-07-25",fApprox:true,status:"open",statusLabel:"Granted — operating",statusDate:"Final charter Feb 16, 2026",ca:"2025-11-18",
+ occ:[{label:"CA #1350 (PDF)",url:OCC_IA+"/2025/ca1350.pdf"}],appPdf:null,
+ call:{label:"OCC trust-bank list",note:"Operating since Feb 16, 2026; ~$9.9M total assets per OCC active trust-bank list.",links:[{label:"OCC trust-bank list",url:TRUSTLIST}],m:[{k:"Total assets",v:"~$9.9M"},{k:"Charter no.",v:"25370"}]},
+ purpose:"National trust bank: trustee and investment advisor for high-net-worth individuals, families, foundations and business owners, incl. complex illiquid trust assets. Paid-in capital ≥ $10M. (CA #1350)",
+ people:{ceo:"— (not in public letter)",cfo:"—",cco:"—",dirs:["—"],others:["Contact: Elizabeth King — Partner & Managing Director, A&M Private Wealth Partners"],counsel:"—",org:"Alvarez & Marsal"}},
+
+{n:"Paycom National Trust Bank",sn:"Paycom",parent:"Paycom Software — NYSE: PAYC",type:"trust",hq:"Oklahoma City, OK",
+ filed:"2022-06-15",fApprox:true,status:"open",statusLabel:"Granted — operating",statusDate:"CA Feb 1, 2024",ca:"2024-02-01",
+ occ:[{label:"CA #1317 (PDF)",url:OCC_IA+"/2024/ca1317.pdf"}],appPdf:null,
+ call:{label:"OCC trust-bank list",note:"On the OCC active national trust-bank list.",links:[{label:"OCC trust-bank list",url:TRUSTLIST}]},
+ purpose:"National trust bank: trustee for trusts holding client payroll and related payment obligations for Paycom's payroll services. Conditionally approved Feb 1, 2024 (application filed 2022). (CA #1317)",
+ people:null},
+
+{n:"Wise National Trust, N.A.",sn:"Wise",parent:"Wise plc — LSE: WISE",type:"trust",hq:"Austin, TX",
+ filed:"2025-06-16",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:"https://www.occ.gov/topics/charters-and-licensing/public-comment/wise-national-trust-application.pdf",call:PENDCALL,
+ purpose:"National trust bank: multicurrency accounts, USD payment processing and fiduciary services; seeks direct Fedwire/FedNow access via a Federal Reserve master account. Oldest undecided application in the window. (Application, Jun 16, 2025)",
+ people:{ceo:"Mike Boush",cfo:"Teele Mark",cco:"—",dirs:["Mike Boush","Harsh Sinha","Teele Mark","Balazs Barna","Carol Nelson","Sean Gray"],others:["Balazs Barna — CTO"],counsel:"Gibson, Dunn & Crutcher — Rosemary Spaziani",org:"Wise"}},
+
+{n:"World Liberty Trust Company, N.A.",sn:"World Liberty",parent:"World Liberty Financial (WLFI)",type:"trust",hq:"Miami, FL",
+ filed:"2026-01-06",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DPDF+"world-liberty-trust-company.pdf",call:PENDCALL,
+ purpose:"National trust company: issue the USD1 stablecoin, manage the USD1 reserve, and provide institutional digital-asset custody. (Application, received Jan 6, 2026)",
+ people:{ceo:"Zachary Witkoff (Chair & President)",cfo:"To be identified (per application)",cco:"Brandi Reynolds",dirs:["Zachary Witkoff","Scott Alper","Robert Witkoff","Erin Baskett","Jeffrey Weiner"],others:["Mack McCain — Chief Trust Officer","Chris McNab — CISO"],counsel:"—",org:"World Liberty Financial"}},
+
+{n:"PAYO Digital Bank, N.A.",sn:"PAYO (Payoneer)",parent:"Payoneer — Nasdaq: PAYO",type:"trust",hq:"New York, NY",
+ filed:"2026-02-23",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed national trust bank to issue PAYO-USD, a dollar stablecoin for Payoneer's SMB cross-border payments customers, with on/off-ramp settlement inside the trust bank.",
+ people:null},
+
+{n:"zerohash national trust bank",sn:"zerohash",parent:"Zerohash",type:"trust",hq:"Chicago, IL",
+ filed:"2026-03-02",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed national trust bank for digital-asset custody and GENIUS-Act stablecoin activities; Zerohash provides crypto infrastructure for Morgan Stanley's E*Trade and other platforms.",
+ people:null},
+
+{n:"EDX Trust, N.A.",sn:"EDX",parent:"EDX Markets",type:"trust",hq:"—",
+ filed:"2026-03-26",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed national trust bank for digital-asset custody and asset management; EDX Markets is an institution-only crypto exchange backed by Citadel, Fidelity and Schwab.",
+ people:null},
+
+{n:"Lorum National Trust Bank, N.A.",sn:"Lorum",parent:"Lorum (fka Fuse)",type:"trust",hq:"New York, NY",
+ filed:"2026-03-31",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed national trust bank for clearing and cash management services to financial institutions; no lending planned.",
+ people:null},
+
+{n:"Agora National Trust Bank",sn:"Agora",parent:"Agora Finance",type:"trust",hq:"New York, NY",
+ filed:"2026-04-20",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed national trust bank for stablecoin issuance (AUSD), digital-asset custody and investment advisory services.",
+ people:null},
+
+{n:"Payward National Trust Company",sn:"Payward (Kraken)",parent:"Payward — parent of Kraken",type:"trust",hq:"New York, NY",
+ filed:"2026-05-08",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DPDF+"payward-national-trust-company.pdf",call:PENDCALL,
+ purpose:"National trust company: digital-asset custody for institutions and eligible individuals, staking support, trading support and collateral management. (Application, May 8, 2026)",
+ people:{ceo:"Gurpreet Oberoi",cfo:"Brian Mathena",cco:"Joshua Fretto (also Chief Risk Officer)",dirs:["Gurpreet Oberoi","Rob Loban","Cynthia Delpozo","Jack Finio","Jan Owen","Mona Elliot"],others:["Ciaran Small — COO & Chief Trust Officer","Reginald Simington — CISO"],counsel:"Covington & Burling — Michael Nonaka",org:"Kraken Payward"}},
+
+{n:"Catena Trust Bank, N.A.",sn:"Catena",parent:"Catena Labs — Sean Neville (Circle co-founder)",type:"trust",hq:"—",
+ filed:"2026-05-18",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Proposed national trust bank — an 'AI-native financial institution' for fiat, securities and GENIUS-Act stablecoin custody/clearing; filed alongside a $30M Series A led by a16z.",
+ people:{ceo:"Sean Neville (Catena Labs co-founder)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"—",org:"Catena Labs"}},
+
+/* ===== CONVERSIONS ===== */
+{n:"UBS Bank USA, N.A.",sn:"UBS Bank USA",parent:"UBS Group",type:"conversion",hq:"Salt Lake City, UT",
+ filed:"2025-10-28",fApprox:true,status:"open",statusLabel:"Converted — operating",statusDate:"CA Jan 13, 2026",ca:"2026-01-13",
+ occ:[{label:"CA #1360 (PDF)",url:OCC_IA+"/2026/ca1360.pdf"}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports. Q1 2026: $122.3B assets (largest institution in this dataset).",links:[{label:"FDIC BankFind",url:BF+"57565"},{label:"FFIEC CDR",url:CDR}],
+  m:[{k:"Total assets",v:"$122.3B"},{k:"Deposits",v:"$108.2B"},{k:"Gross loans",v:"$90.0B"},{k:"Net income (Q1)",v:"$315.4M"}]},
+ purpose:"Conversion of UBS Bank USA from a Utah industrial bank to a national association (charter no. 25396): full-service banking for UBS's U.S. wealth-management clients. (CA #1360)",
+ people:{ceo:"Frank Destra (President, UBS Bank USA)",cfo:"—",cco:"—",dirs:["— (existing bank board)"],others:[],counsel:"Sullivan & Cromwell — Michelle Chen, Michael Escue",org:"UBS"}},
+
+{n:"Ponce Bank, N.A.",sn:"Ponce Bank",parent:"Ponce Financial Group (CDFI) — Nasdaq: PDLB",type:"conversion",hq:"Bronx, NY",
+ filed:"2024-09-15",fApprox:true,status:"open",statusLabel:"Converted — operating",statusDate:"CA Feb 19, 2025",ca:"2025-02-19",
+ occ:[{label:"CA #1334 (PDF)",url:OCC_IA+"/2025/ca1334.pdf"}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports; ~$3.3B assets at Q1 2026.",links:[{label:"FDIC BankFind",url:BF+"31189"}],m:[{k:"Total assets",v:"$3.29B"},{k:"Deposits",v:"$2.15B"}]},
+ purpose:"Conversion of Ponce Bank (a Bronx community-development bank, CDFI) from a New York state charter to a national association. (CA #1334)",
+ people:null},
+
+{n:"Servbank, N.A.",sn:"Servbank",parent:"Servbank",type:"conversion",hq:"Oswego, IL",
+ filed:"2025-01-15",fApprox:true,status:"open",statusLabel:"Converted — operating",statusDate:"CA Apr 30, 2025",ca:"2025-04-30",
+ occ:[{label:"CA #1338 (PDF)",url:OCC_IA+"/2025/ca1338.pdf"}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports; ~$1.7B assets at Q1 2026.",links:[{label:"FDIC BankFind",url:BF+"55130"}],m:[{k:"Total assets",v:"$1.72B"},{k:"Deposits",v:"$1.24B"}]},
+ purpose:"Conversion of Servbank from an Illinois savings bank to a national association; the bank focuses on mortgage servicing. (CA #1338)",
+ people:null},
+
+{n:"BTG Pactual Bank, N.A. (fka M.Y. Safra Bank, FSB)",sn:"BTG Pactual",parent:"BTG Pactual (Brazil)",type:"conversion",hq:"New York, NY",
+ filed:"2025-06-15",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Sep 11, 2025",ca:"2025-09-11",
+ occ:[{label:"CA #1345 (PDF)",url:OCC_IA+"/2025/ca1345.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Conversion of M.Y. Safra Bank from a federal savings bank to a national association under the BTG Pactual Bank, N.A. name. (CA #1345)",
+ people:null},
+
+{n:"Boston Trust Walden Company, N.A.",sn:"Boston Trust Walden",parent:"Boston Trust Walden",type:"conversion",hq:"Boston, MA",
+ filed:"2025-08-15",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Oct 30, 2025",ca:"2025-10-30",
+ occ:[{label:"CA #1349 (PDF)",url:OCC_IA+"/2025/ca1349.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Conversion of Boston Trust Walden Company (a Massachusetts trust company, wealth management) to a national association. (CA #1349)",
+ people:null},
+
+{n:"Citizens Business Bank, N.A.",sn:"Citizens Business Bank",parent:"CVB Financial — Nasdaq: CVBF",type:"conversion",hq:"Ontario, CA",
+ filed:"2025-09-15",fApprox:true,status:"open",statusLabel:"Converted — operating",statusDate:"CA Nov 19, 2025",ca:"2025-11-19",
+ occ:[{label:"CA #1351 (PDF)",url:OCC_IA+"/2025/ca1351.pdf"}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports; operating as a national bank by Apr 2026 (OCC CD #1371). Q1 2026: $15.5B assets.",links:[{label:"FDIC BankFind",url:BF+"21716"}],m:[{k:"Total assets",v:"$15.5B"},{k:"Deposits",v:"$12.0B"}]},
+ purpose:"Conversion of Citizens Business Bank from a California state charter to a national association with fiduciary powers. (CA #1351)",
+ people:null},
+
+{n:"United Texas Bank",sn:"United Texas Bank",parent:"United Texas Bancshares",type:"conversion",hq:"Dallas, TX",
+ filed:"2026-02-15",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"May 15, 2026",ca:"2026-05-15",
+ occ:[{label:"CD #1375 (PDF)",url:OCC_IA+"/2026/cd1375.pdf"}],appPdf:null,call:NOTOPEN,
+ purpose:"Conversion of United Texas Bank (Dallas) from a Texas state charter to a national association. (CD #1375)",
+ people:null},
+
+{n:"BitGo Bank & Trust, N.A.",sn:"BitGo",parent:"BitGo — NYSE: BTGO (IPO Jan 2026)",type:"conversion",hq:"Sioux Falls, SD",
+ filed:"2025-07-14",status:"conditional",statusLabel:"Conditionally approved",statusDate:"Dec 12, 2025",ca:"2025-12-12",
+ occ:[{label:"CA #1353 (PDF)",url:OCC_IA+"/2026/ca1353.pdf"},{label:"OCC news release",url:"https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-125.html"}],appPdf:null,call:TRUSTCALL,
+ purpose:"Conversion of BitGo Trust Company (South Dakota) to a national trust bank: fiduciary custody of digital assets and fiat, settlement/clearing, wallet platform, key management, staking, escrow, stablecoin issuance. Min. tier-1 $8.7M. (CA #1353)",
+ people:{ceo:"Mike Belshe (co-founder/CEO, BitGo)",cfo:"—",cco:"—",dirs:["Mike Belshe","Cassandra Lentchner","Mark Musi"],others:[],counsel:"Gibson, Dunn & Crutcher — Rosemary Spaziani",org:"BitGo"}},
+
+{n:"Fidelity Digital Assets, N.A.",sn:"Fidelity Digital Assets",parent:"Fidelity Investments (FMR)",type:"conversion",hq:"New York → Boston, MA",
+ filed:"2025-07-01",fApprox:true,status:"conditional",statusLabel:"Conditionally approved",statusDate:"Dec 12, 2025",ca:"2025-12-12",
+ occ:[{label:"CA #1355 (PDF)",url:OCC_IA+"/2026/ca1355.pdf"},{label:"OCC news release",url:"https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-125.html"}],appPdf:null,call:TRUSTCALL,
+ purpose:"Conversion of Fidelity Digital Asset Services (NY) to a national trust bank, relocating to Boston: crypto custody and trade execution, transfers, custodial cash accounts, IRA services, settlement-as-a-service, collateral agency, stablecoin issuance, staking. Min. tier-1 $25M. (CA #1355)",
+ people:{ceo:"— (director table not in public letter)",cfo:"Anna Lent (Head of Finance)",cco:"Jill Evans",dirs:["—"],others:["Brian Hickey — Head of Operations","Penry Jackson — Head of Risk","Terrence Dempsey — Head of Product Strategy"],counsel:"Sidley Austin — Michael Lewis",org:"Fidelity Digital Assets"}},
+
+{n:"Paxos Trust Company, N.A.",sn:"Paxos (2025)",parent:"Paxos",type:"conversion",hq:"New York, NY",
+ filed:"2025-08-12",status:"open",statusLabel:"Converted",statusDate:"Dec 12, 2025",ca:"2025-12-12",
+ occ:[{label:"CA #1358 (PDF)",url:OCC_IA+"/2026/ca1358.pdf"},{label:"OCC news release",url:"https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-125.html"}],appPdf:null,call:TRUSTCALL,
+ purpose:"Conversion of Paxos Trust Company (NY) to a national trust bank: fiduciary custody of crypto-assets/fiat/securities/commodities, USD-backed stablecoin issuance, gold-backed token issuance, escrow/fiduciary/payment/exchange agency, crypto exchange and trade facilitation. Min. tier-1 $15M. Paxos reports the conversion took effect Dec 12, 2025. (CA #1358)",
+ people:{ceo:"Charles Cascarilla (co-founder/CEO, Paxos)",cfo:"—",cco:"—",dirs:["— (officer table not in public letter)"],others:[],counsel:"Skadden Arps — Mark Chorazak",org:"Paxos"}},
+
+{n:"Bastion Platforms National Trust Company",sn:"Bastion",parent:"Bastion Platforms",type:"conversion",hq:"New York, NY",
+ filed:"2026-03-30",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:DIGI,call:PENDCALL,
+ purpose:"Conversion of an acquired NYDFS limited-purpose trust charter (Dibbs Trust) to a national trust company for white-label stablecoin issuance infrastructure.",
+ people:null},
+
+/* ===== OTHER DIGITAL-ASSET LICENSING ===== */
+{n:"CBW Bank",sn:"CBW Bank",parent:"CBW Bank (existing Kansas community bank)",type:"other",hq:"Weir, KS",
+ filed:"2026-06-26",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:null,call:{label:"Existing bank — files call reports",note:"Existing insured bank; its call reports are on FFIEC CDR regardless of this application's outcome.",links:[{label:"FFIEC CDR",url:CDR}]},
+ purpose:"Existing community bank with a pending digital-asset licensing application (application type not public; conversions are not subject to public comment).",
+ people:null},
+
+{n:"The First National Bank of Cooper",sn:"FNB Cooper",parent:"FNB Cooper (existing national bank)",type:"other",hq:"Cooper, TX",
+ filed:"2026-07-08",status:"pending",statusLabel:"Pending review",statusDate:"—",ca:null,
+ occ:[{label:"OCC digital-assets docket",url:DIGI}],appPdf:null,call:{label:"Existing bank — files call reports",note:"Existing insured bank; its call reports are on FFIEC CDR regardless of this application's outcome.",links:[{label:"FFIEC CDR",url:CDR}]},
+ purpose:"Existing Texas national bank with a pending digital-asset licensing application — the newest entry in the window (received Jul 8, 2026).",
+ people:null},
+
+/* ===== HISTORICAL (2019–2023) ===== */
+{n:"Varo Bank, N.A.",sn:"Varo",parent:"Varo Money",type:"denovo",hq:"San Francisco, CA",hist:true,
+ filed:"2017-07-15",fApprox:true,status:"open",statusLabel:"Granted — operating",statusDate:"Charter granted Jul 31, 2020",ca:"2018-09-04",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports.",links:[{label:"FDIC BankFind",url:BF+"59190"}],m:[{k:"Total assets",v:"$374M"},{k:"Deposits",v:"$220M"},{k:"Net income (Q1)",v:"–$23.1M",neg:true}]},
+ purpose:"All-mobile full-service national bank: consumer deposits, credit cards, lending. First fintech to receive a full-service national bank charter (preliminary approval Sep 4, 2018; charter granted Jul 31, 2020; FDIC required ≥ $104.4M initial capital).",
+ people:{ceo:"Colin Walsh (co-founder/CEO at approval)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"Sullivan & Cromwell",org:"Varo Bank"}},
+
+{n:"SoFi Bank, N.A.",sn:"SoFi",parent:"Social Finance, Inc. — Nasdaq: SOFI",type:"denovo",hq:"Cottonwood Heights, UT",hist:true,
+ filed:"2020-07-15",fApprox:true,status:"open",statusLabel:"Granted — operating",statusDate:"Approved Jan 18, 2022; completed Feb 2, 2022",ca:"2020-10-27",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports; $49.7B assets at Q1 2026.",links:[{label:"FDIC BankFind",url:BF+"26881"}],m:[{k:"Total assets",v:"$49.7B"},{k:"Deposits",v:"$42.3B"},{k:"Net income (Q1)",v:"$244.6M"}]},
+ purpose:"De novo full-service national bank (application later restructured as an interim-bank charter plus acquisition of Golden Pacific Bancorp): digital consumer banking, lending and investing. OCC capital condition $750M.",
+ people:{ceo:"Anthony Noto (CEO, SoFi)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"Wachtell, Lipton, Rosen & Katz — Richard Kim",org:"SoFi"}},
+
+{n:"Agility Bank, N.A.",sn:"Agility",parent:"Agility Bank organizers",type:"denovo",hq:"Houston, TX",hist:true,
+ filed:"2020-03-15",fApprox:true,status:"open",statusLabel:"Granted — operating",statusDate:"CA Jul 29, 2020; opened May 23, 2022",ca:"2020-07-29",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"FFIEC call report filed",note:"Files quarterly call reports.",links:[{label:"FDIC BankFind",url:BF+"59239"}],m:[{k:"Total assets",v:"$144M"},{k:"Deposits",v:"$112M"}]},
+ purpose:"Women-focused community de novo national bank: deposits and lending for small businesses and consumers. FDIC insurance approved Oct 14, 2020; opened May 23, 2022.",
+ people:{ceo:"Lauren Sparks (founder/CEO)",cfo:"—",cco:"—",dirs:["Edna Meyer-Nelson (Board Chair)"],others:["Rodney Nabors — Chief Lending Officer","Jay Pedraza — CTO"],counsel:"—",org:"Agility Bank"}},
+
+{n:"Figure Bank, N.A.",sn:"Figure",parent:"Figure Technologies",type:"denovo",hq:"San Francisco, CA",hist:true,
+ filed:"2020-11-15",fApprox:true,status:"withdrawn",statusLabel:"Withdrawn",statusDate:"Aug 1, 2023",ca:null,end:"2023-08-01",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"—",note:"Withdrawn before approval; no bank was chartered.",links:[]},
+ purpose:"Proposed full-service national bank (initially uninsured; amended Dec 2021 to seek FDIC insurance): Figure Pay accounts and HELOC/mortgage/student-loan refinancing and personal loans on the Provenance blockchain. Withdrawn Aug 1, 2023.",
+ people:{ceo:"Mike Cagney (co-founder/CEO at filing)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"—",org:"Figure Technologies"}},
+
+{n:"Oportun",sn:"Oportun",parent:"Oportun Financial — Nasdaq: OPRT",type:"denovo",hq:"San Carlos, CA",hist:true,
+ filed:"2020-11-23",status:"withdrawn",statusLabel:"Withdrawn",statusDate:"Late 2021",ca:null,end:"2021-11-01",endApprox:true,
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"—",note:"Withdrawn before approval; no bank was chartered.",links:[]},
+ purpose:"Proposed full-service national bank for consumer lending and banking serving low- and moderate-income communities. Withdrawn in late 2021.",
+ people:{ceo:"Raul Vazquez (CEO at filing)",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"—",org:"Oportun"}},
+
+{n:"Anchorage Digital Bank, N.A.",sn:"Anchorage",parent:"Anchorage Digital",type:"conversion",hq:"Sioux Falls, SD",hist:true,
+ filed:"2020-11-15",fApprox:true,status:"open",statusLabel:"Converted — operating",statusDate:"CA Jan 13, 2021",ca:"2021-01-13",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,call:TRUSTCALL,
+ purpose:"Conversion of Anchorage Trust Company (South Dakota) to a national trust bank: digital-asset custody and related fiduciary services. First crypto firm to receive an OCC national trust charter (CA #1257).",
+ people:{ceo:"Nathan McCauley (President & Director)",cfo:"—",cco:"—",dirs:["Nathan McCauley"],others:[],counsel:"—",org:"Anchorage Digital"}},
+
+{n:"Paxos National Trust (1st application)",sn:"Paxos (2021)",parent:"Paxos",type:"trust",hq:"New York, NY",hist:true,
+ filed:"2020-12-15",fApprox:true,status:"lapsed",statusLabel:"CA lapsed — never opened",statusDate:"CA Apr 23, 2021",ca:"2021-04-23",
+ occ:[{label:"CA letter (PDF)",url:"https://www.occ.gov/news-issuances/news-releases/2021/nr-occ-2021-49a.pdf"}],appPdf:null,
+ call:{label:"—",note:"Conditional approval lapsed; the bank never opened and never filed a call report.",links:[]},
+ purpose:"Proposed national trust bank: digital-asset custody and stablecoin-related fiduciary services. Conditional approval lapsed after the bank did not open within the approval window; Paxos converted via a new application approved Dec 12, 2025.",
+ people:{ceo:"Charles Cascarilla",cfo:"—",cco:"Daniel Burstein (GC & CCO)",dirs:["Charles Cascarilla","Sheila Bair","Robert Herz","Jim Manzi","William Bradley","Duncan Niederauer","Brian Stern","Emil Woods"],others:[],counsel:"Covington & Burling — Michael Nonaka",org:"Paxos"}},
+
+{n:"Protego Trust Bank, N.A. (1st application)",sn:"Protego (2021)",parent:"Protego",type:"conversion",hq:"Olympia, WA",hist:true,
+ filed:"2020-11-15",fApprox:true,status:"lapsed",statusLabel:"CA lapsed — never opened",statusDate:"CA Feb 4, 2021",ca:"2021-02-04",
+ occ:[{label:"OCC CAS docket",url:CAS}],appPdf:null,
+ call:{label:"—",note:"Conditional approval lapsed; the bank never opened and never filed a call report.",links:[]},
+ purpose:"Conversion of Protego Trust Company (Washington) to a national trust bank for digital-asset custody (CA #1259, Feb 4, 2021). Lapsed unopened; refiled in 2025 as National Digital Trust Company (conditionally approved Feb 13, 2026).",
+ people:{ceo:"Greg Gilman",cfo:"—",cco:"—",dirs:["—"],others:[],counsel:"—",org:"Protego"}}
+];
+
+/* ===== Q1 2026 CALL REPORT DATA (FFIEC CDR via FDIC BankFind, 3/31/2026; $ thousands) ===== */
+const CR=[
+ {n:"UBS Bank USA, N.A.",action:"ILC → national conversion (CA Jan 13, 2026)",cert:57565,asset:122261832,dep:108163032,loans:89990947,eq:9037413,ni:315418,roa:1.04},
+ {n:"SoFi Bank, N.A.",action:"De novo — approved Jan 18, 2022 (completed Feb 2, 2022)",cert:26881,asset:49667835,dep:42321604,loans:40905149,eq:6326023,ni:244608,roa:2.03},
+ {n:"Citizens Business Bank, N.A.",action:"State → national conversion (CA Nov 19, 2025)",cert:21716,asset:15511016,dep:12002449,loans:8643316,eq:2295693,ni:52047,roa:1.34},
+ {n:"Ponce Bank, N.A.",action:"State → national conversion (CA Feb 19, 2025)",cert:31189,asset:3289470,dep:2148171,loans:2727015,eq:514836,ni:9347,roa:1.15},
+ {n:"Servbank, N.A.",action:"Savings bank → national conversion (CA Apr 30, 2025)",cert:55130,asset:1717890,dep:1243007,loans:1148055,eq:213039,ni:6751,roa:1.99},
+ {n:"Erebor Bank, N.A.",action:"De novo — final charter Feb 6, 2026 (first call report)",cert:59378,asset:1703431,dep:1097732,loans:0,eq:600608,ni:-6009,roa:-1.41},
+ {n:"Varo Bank, N.A.",action:"De novo — charter granted Jul 31, 2020",cert:59190,asset:374270,dep:220053,loans:100670,eq:91450,ni:-23147,roa:-24.68},
+ {n:"Agility Bank, N.A.",action:"De novo — CA Jul 29, 2020; opened May 23, 2022",cert:59239,asset:143972,dep:112453,loans:103239,eq:28867,ni:-188,roa:-0.55}
+];
+</script>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const TODAY=new Date("2026-07-19T00:00:00");
+const MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const D=(s)=>new Date(s+"T00:00:00");
+const days=(a,b)=>Math.round((b-a)/86400000);
+const fmtD=(s)=>{const d=D(s);return MO[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();};
+const fmtMY=(s)=>{const d=D(s);return MO[d.getMonth()]+" "+d.getFullYear();};
+
+/* ---------- KPIs ---------- */
+const nOpen=APPS.filter(a=>a.status==="open"||a.status==="final").length;
+const nCond=APPS.filter(a=>a.status==="conditional").length;
+const nPend=APPS.filter(a=>a.status==="pending").length;
+const nWd=APPS.filter(a=>a.status==="withdrawn"||a.status==="lapsed").length;
+const crTot=(CR.reduce((s,r)=>s+r.asset,0)/1e6).toFixed(1);
+const kpis=[
+ {num:APPS.length,lbl:"novel applications tracked, Jul 2019 – Jul 2026",c:"var(--teal)"},
+ {num:"18",lbl:"de novo filings in 2025 — equal to the prior four years combined",c:"var(--gold)"},
+ {num:"18",lbl:"additional filings in H1 2026",c:"var(--gold)"},
+ {num:nOpen,lbl:"granted — operating or final approval",c:"var(--green)"},
+ {num:nCond,lbl:"conditionally approved (pre-opening)",c:"#ffd58a"},
+ {num:nPend,lbl:"pending review",c:"var(--blue)"},
+ {num:nWd,lbl:"withdrawn or lapsed",c:"var(--red)"},
+ {num:"$"+crTot+"B",lbl:"combined Q1 2026 assets of the 8 call-report filers",c:"#9cc2ff"}
+];
+$("#kpiRow").innerHTML=kpis.map(k=>`<div class="kpi" style="--accent:${k.c}"><div class="num">${k.num}</div><div class="lbl">${k.lbl}</div></div>`).join("");
+
+/* ---------- Days-to-CA gantt ---------- */
+const gRows=[];
+APPS.forEach(a=>{
+  if(!a.filed)return;
+  const f=D(a.filed);let barDays,cls,lbl,sortKey=a.filed;
+  if(a.ca){barDays=days(f,D(a.ca));cls="";lbl=`CA ${fmtD(a.ca)} · <b>${barDays}d</b>`;
+    if(a.status==="lapsed"){cls="lapsed";lbl=`CA ${fmtD(a.ca)} · <b>${barDays}d</b> · lapsed unopened`;}
+    if(a.fApprox||a.caApprox)lbl="~"+lbl;}
+  else if(a.status==="withdrawn"&&a.end){barDays=days(f,D(a.end));cls="wd";lbl=`withdrew ${a.endApprox?"~":""}${fmtD(a.end)} · <b>${barDays}d</b>`;}
+  else{barDays=days(f,TODAY);cls="pend";lbl=`pending · <b>${barDays}d</b> so far`;}
+  gRows.push({sn:a.sn,filed:a.filed,barDays,cls,lbl,sortKey,fApprox:a.fApprox});
+});
+gRows.sort((a,b)=>a.sortKey<b.sortKey?-1:1);
+const gMax=Math.max(...gRows.map(r=>r.barDays));
+const gColor={ "":"#3fce8d", lapsed:"#c98a8a", wd:"#f27070", pend:"#5aa2ff" };
+let gh="";
+gRows.forEach(r=>{
+  const w=Math.max(0.35,(r.barDays/gMax*100));
+  gh+=`<div class="g-row"><div class="g-name">${r.sn}<span class="yr">filed ${r.fApprox?"~":""}${fmtMY(r.filed)}</span></div>
+  <div class="g-track"><div class="g-bar" style="width:${w}%;background:${gColor[r.cls]}" title="${r.sn}: ${r.barDays} days (filed ${fmtD(r.filed)})"></div></div>
+  <div class="g-lbl">${r.lbl}</div></div>`;
+});
+$("#gantt").innerHTML=gh;
+const ticks=[[0,"0d"],[120,"120d"],[365,"1 yr"],[730,"2 yr"],[990,"3 yr"]];
+$("#gAxis").innerHTML=`<div></div><div class="ax">${ticks.filter(t=>t[0]<=gMax+20).map(t=>`<span class="tick" style="left:${(t[0]/gMax*100)}%">${t[1]}</span>`).join("")}</div><div></div>`;
+
+/* ---------- Monthly filings chart (Jul 2019 – Jul 2026) ---------- */
+const months=[];for(let i=0;i<85;i++){const d=new Date(2019,6+i,1);months.push({y:d.getFullYear(),m:d.getMonth(),key:d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")});}
+const counts={};months.forEach(mo=>counts[mo.key]={denovo:0,trust:0,conversion:0,other:0});
+APPS.forEach(a=>{if(!a.filed)return;const key=a.filed.slice(0,7);if(counts[key]&&counts[key][a.type]!==undefined)counts[key][a.type]++;});
+const maxV=Math.max(...months.map(mo=>{const c=counts[mo.key];return c.denovo+c.trust+c.conversion+c.other;}),1);
+const MW=15,H=180,PAD=26,W=months.length*MW+PAD+10;
+const cols={denovo:"#5aa2ff",trust:"#2dd4bf",conversion:"#b48cff",other:"#93a0b8"};
+let svg=`<svg width="${W}" height="${H+44}" viewBox="0 0 ${W} ${H+44}" role="img">`;
+svg+=`<line x1="${PAD}" y1="${H}" x2="${W-4}" y2="${H}" stroke="#1e2c4a"/>`;
+months.forEach((mo,i)=>{
+  const x=PAD+i*MW+1,w=MW-4;let y=H;const c=counts[mo.key];
+  ["denovo","trust","conversion","other"].forEach(t=>{const v=c[t];if(!v)return;const h=Math.max(2,(v/maxV)*(H-18));y-=h;
+    svg+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="1.5" fill="${cols[t]}"><title>${mo.y}-${String(mo.m+1).padStart(2,"0")}: ${v} ${t}</title></rect>`;});
+  const tot=c.denovo+c.trust+c.conversion+c.other;
+  if(tot>0)svg+=`<text x="${x+w/2}" y="${y-3}" text-anchor="middle" font-size="8.5" fill="#8fa0bd" font-weight="700">${tot}</text>`;
+  if(mo.m===0){svg+=`<text x="${x+w/2}" y="${H+15}" text-anchor="middle" font-size="9.5" fill="#5d6d8c" font-weight="700">${mo.y}</text>`;}
+  if(mo.m===6&&(mo.y===2019||mo.y===2026))svg+=`<text x="${x+w/2}" y="${H+15}" text-anchor="middle" font-size="9.5" fill="#5d6d8c">Jul ${mo.y}</text>`;
+});
+svg+=`</svg>`;
+$("#barChart").innerHTML=svg;
+
+/* ---------- Status mix ---------- */
+const stMap={open:"#3fce8d",final:"#63e6be",conditional:"#f0b64c",pending:"#5aa2ff",withdrawn:"#f27070",lapsed:"#f27070"};
+const types=[["denovo","Full-service de novo"],["trust","National trust (de novo)"],["conversion","Conversions"],["other","Other licensing"]];
+let stackHTML="";
+types.forEach(([t,label])=>{
+  const rows=APPS.filter(a=>a.type===t);const tot=rows.length;
+  const seg=["open","final","conditional","pending","withdrawn","lapsed"].map(s=>{
+    const n=rows.filter(a=>a.status===s).length;if(!n)return "";
+    return `<div style="width:${(n/tot*100).toFixed(1)}%;background:${stMap[s]};min-width:20px" title="${s}: ${n}"><span>${n}</span></div>`;}).join("");
+  stackHTML+=`<div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:5px"><span>${label}</span><b style="color:var(--text)">${tot}</b></div>
+  <div style="display:flex;height:24px;border-radius:7px;overflow:hidden;border:1px solid var(--border)">${seg}</div></div>`;
+});
+stackHTML+=`<style>#stackChart div div div span{display:block;text-align:center;font-size:11px;font-weight:800;color:rgba(0,0,0,.65);line-height:24px}</style>`;
+$("#stackChart").innerHTML=stackHTML;
+
+/* ---------- Q1 call report table ---------- */
+const fmt$=v=>{const b=v/1e6;if(Math.abs(b)>=1)return (b<10?b.toFixed(2):b.toFixed(1))+"B";return (v/1e3).toFixed(0)+"M";};
+const fmtN=v=>(v<0?"–":"")+"$"+fmt$(Math.abs(v));
+let crh="";CR.forEach(r=>{
+  crh+=`<tr><td><b>${r.n}</b></td><td class="dt">${r.action}</td>
+  <td class="num">${fmtN(r.asset)}</td><td class="num">${fmtN(r.dep)}</td><td class="num">${fmtN(r.loans)}</td>
+  <td class="num">${fmtN(r.eq)}</td><td class="num ${r.ni<0?"neg":""}">${fmtN(r.ni)}</td>
+  <td class="num ${r.roa<0?"neg":""}">${r.roa<0?"–":""}${Math.abs(r.roa).toFixed(2)}%</td>
+  <td><div class="cellinks"><a href="${BF+r.cert}" target="_blank" rel="noopener">BankFind ↗</a><a href="${CDR}" target="_blank" rel="noopener">FFIEC CDR ↗</a></div></td></tr>`;
+});
+const T=CR.reduce((s,r)=>({asset:s.asset+r.asset,dep:s.dep+r.dep,loans:s.loans+r.loans,eq:s.eq+r.eq,ni:s.ni+r.ni}),{asset:0,dep:0,loans:0,eq:0,ni:0});
+$("#crBody").innerHTML=crh;
+$("#crFoot").innerHTML=`<tr style="background:var(--panel);font-weight:700"><td>Total (8 banks)</td><td></td>
+ <td class="num">${fmtN(T.asset)}</td><td class="num">${fmtN(T.dep)}</td><td class="num">${fmtN(T.loans)}</td>
+ <td class="num">${fmtN(T.eq)}</td><td class="num">${fmtN(T.ni)}</td><td></td><td></td></tr>`;
+
+/* ---------- Tracker table ---------- */
+const typeLabel={denovo:"Full-service de novo",trust:"National trust (de novo)",conversion:"Conversion",other:"Other licensing"};
+const stClass={open:"open",final:"final",conditional:"conditional",pending:"pending",withdrawn:"withdrawn",lapsed:"lapsed"};
+function filedLabel(a){return a.fApprox?("~"+fmtMY(a.filed)+" †"):fmtD(a.filed);}
+function daysCell(a){
+  if(a.ca)return `<span class="days">${a.fApprox?"~":""}${days(D(a.filed),D(a.ca))} d</span>`;
+  if(a.status==="pending"&&a.filed)return `<span class="days">${days(D(a.filed),TODAY)}d pending</span>`;
+  if(a.end)return `<span class="days">${(a.endApprox||a.fApprox)?"~":""}${days(D(a.filed),D(a.end))} d</span>`;
+  return `<span class="days">—</span>`;
+}
+function linksCell(list){return `<div class="cellinks">${list.map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("")}</div>`;}
+function occCell(a){
+  let l=[...a.occ];
+  if(a.appPdf)l.push({label:a.appPdf===DIGI?"Application (docket)":"Application (PDF)",url:a.appPdf});
+  return linksCell(l);
+}
+function callCell(a){
+  const c=a.call;
+  if(!c.links||!c.links.length)return `<span class="nolink">${c.label}</span>`;
+  return linksCell(c.links);
+}
+let fType="all",fStatus="all",fQ="";
+function render(){
+  const tb=$("#tbody");let shown=0;let html="";
+  APPS.forEach((a,idx)=>{
+    if(fType!=="all"&&a.type!==fType)return;
+    if(fStatus!=="all"){if(fStatus==="withdrawn"){if(a.status!=="withdrawn"&&a.status!=="lapsed")return;}else if(fStatus==="open"){if(a.status!=="open"&&a.status!=="final")return;}else if(a.status!==fStatus)return;}
+    const hay=(a.n+" "+a.parent+" "+a.hq).toLowerCase();
+    if(fQ&&!hay.includes(fQ))return;
+    shown++;
+    html+=`<tr class="row" data-idx="${idx}">
+      <td class="namecell">${a.n}${a.hist?`<span class="hist-tag">2019–23</span>`:""}<span class="parent">${a.parent}</span></td>
+      <td><span class="pill ${a.type}">${typeLabel[a.type]}</span></td>
+      <td class="dt">${a.hq}</td>
+      <td class="dt">${filedLabel(a)}</td>
+      <td><span class="st ${stClass[a.status]}"><span class="d"></span>${a.statusLabel}</span></td>
+      <td class="dt">${a.statusDate}</td>
+      <td>${daysCell(a)}</td>
+      <td>${occCell(a)}</td>
+      <td>${callCell(a)}</td></tr>
+    <tr class="detail" data-det="${idx}" style="display:none"><td colspan="9"><div class="detailbox">
+      <div>
+        <p><b>Business purpose (per application/decision).</b> ${a.purpose}</p>
+        <p style="margin-top:10px"><b>Call-report status:</b> ${a.call.note}</p>
+        <div class="linkrow" style="margin-top:12px">${[...a.occ,...(a.appPdf?[{label:a.appPdf===DIGI?"Application (docket)":"Application (PDF)",url:a.appPdf}]:[]),...(a.call.links||[])].map(l=>`<a class="lnk" href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("")}</div>
+      </div>
+      <div>${a.call.m?`<div class="minimetrics">${a.call.m.map(m=>`<div class="metric"><div class="v ${m.neg?"neg":""}">${m.v}</div><div class="k">${m.k}</div></div>`).join("")}</div>`:`<p style="font-size:12.5px;color:var(--faint)">No call-report financials on file for this applicant.</p>`}</div>
+    </div></td></tr>`;
+  });
+  tb.innerHTML=html||`<tr><td colspan="9" style="padding:26px;color:var(--muted)">No applications match these filters.</td></tr>`;
+  $("#countLbl").textContent=shown+" of "+APPS.length+" shown";
+  tb.querySelectorAll("tr.row").forEach(r=>r.addEventListener("click",e=>{
+    if(e.target.tagName==="A")return;
+    const det=tb.querySelector(`tr.detail[data-det="${r.dataset.idx}"]`);
+    const vis=det.style.display!=="none";
+    tb.querySelectorAll("tr.detail").forEach(d=>d.style.display="none");
+    det.style.display=vis?"none":"table-row";
+  }));
+}
+document.querySelectorAll(".chipbtn[data-type]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".chipbtn[data-type]").forEach(x=>x.classList.remove("on"));b.classList.add("on");fType=b.dataset.type;render();
+}));
+document.querySelectorAll(".chipbtn[data-status]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".chipbtn[data-status]").forEach(x=>x.classList.remove("on"));b.classList.add("on");fStatus=b.dataset.status;render();
+}));
+$("#q").addEventListener("input",e=>{fQ=e.target.value.trim().toLowerCase();render();});
+render();
+
+/* ---------- People table ---------- */
+function li(name,org){
+  const q=encodeURIComponent(name.replace(/\s*\(.*?\)\s*/g," ").trim()+" "+org);
+  return `<a href="https://www.linkedin.com/search/results/people/?keywords=${q}" target="_blank" rel="noopener">${name}</a>`;
+}
+function pplList(items,org){return items.map(it=>{
+  if(it.trim().startsWith("—"))return `<span class="none">${it}</span>`;
+  const m=it.match(/^([^—(]+)\s*[—(]?\s*(.*)$/);if(!m)return `<span class="none">${it}</span>`;
+  const nm=m[1].trim();const rest=it.slice(nm.length);
+  return `<span class="ppl">${li(nm,org)}</span>${rest?`<span style="color:var(--faint)">${rest}</span>`:""}`;
+}).join(", ");}
+function roleCell(val,org){
+  if(!val||val==="—")return `<span class="none">—</span>`;
+  if(val.includes("(letter lists")||val.includes("not stated")||val.includes("not named")||val.includes("not in public"))return `<span style="font-size:11.5px;color:var(--muted)">${val}</span>`;
+  const m=val.match(/^([^—(]+)\s*(.*)$/);const nm=m[1].trim();const rest=val.slice(nm.length);
+  return `<span class="ppl">${li(nm,org)}</span>${rest?`<span style="color:var(--faint);font-size:11.5px"> ${rest}</span>`:""}`;
+}
+function counselCell(val){
+  if(!val||val==="—")return `<span class="none">—</span>`;
+  const parts=val.split(" — ");
+  if(parts.length<2)return `<span style="font-size:11.5px">${val}</span>`;
+  const firm=parts[0];const people=parts.slice(1).join(" — ").split(",").map(s=>s.trim()).filter(Boolean);
+  const firmShort=firm.split(",")[0].split(" ")[0];
+  return `<span style="font-size:11.5px">${firm}</span><br><span class="role-lbl">contacts</span> `+people.map(p=>`<span class="ppl">${li(p,firmShort)}</span>`).join(", ");
+}
+const pApps=APPS.filter(a=>a.people);
+function renderPeople(q){
+  let html="";let shown=0;
+  pApps.forEach(a=>{
+    const p=a.people;
+    const hay=(a.n+" "+a.parent+" "+(p.ceo||"")+" "+(p.cfo||"")+" "+(p.cco||"")+" "+p.dirs.join(" ")+" "+p.others.join(" ")+" "+(p.counsel||"")).toLowerCase();
+    if(q&&!hay.includes(q))return;shown++;
+    html+=`<tr>
+      <td class="p-app">${a.n}<span class="parent">${a.parent}</span></td>
+      <td>${roleCell(p.ceo,p.org)}</td>
+      <td>${roleCell(p.cfo,p.org)}</td>
+      <td>${roleCell(p.cco,p.org)}</td>
+      <td class="ppl">${p.dirs.length&&p.dirs[0]!=="—"?pplList(p.dirs,p.org):`<span class="none">—</span>`}</td>
+      <td class="ppl">${p.others.length?pplList(p.others,p.org):`<span class="none">—</span>`}</td>
+      <td>${counselCell(p.counsel)}</td></tr>`;
+  });
+  $("#pbody").innerHTML=html||`<tr><td colspan="7" style="padding:22px;color:var(--muted)">No matches.</td></tr>`;
+  $("#pCountLbl").textContent=shown+" of "+pApps.length+" applications with named officers in the public record";
+}
+renderPeople("");
+$("#pq").addEventListener("input",e=>renderPeople(e.target.value.trim().toLowerCase()));
+
+/* ---------- Share ---------- */
+$("#liShare").href="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(location.href);
+$("#copyLink").addEventListener("click",()=>{
+  navigator.clipboard.writeText(location.href).then(()=>{
+    const m=$("#copyMsg");m.style.display="inline";setTimeout(()=>m.style.display="none",2200);
+  });
+});
+})();
+</script>
+</body>
+</html>
