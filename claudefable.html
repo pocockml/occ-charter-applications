@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0236)file:///Users/Parents/Library/Application%20Support/Claude/local-agent-mode-sessions/1adc6af9-a044-441e-a466-a4d582f2be69/9ff21c5b-cc79-455a-bcd4-533ef1c5cab8/local_3f77fd8f-3373-4562-b41e-827b0b9fe7dc/outputs/occ_charter_dashboard.html -->
+<!-- saved from url=(0227)file:///Users/Parents/Library/Application%20Support/Claude/local-agent-mode-sessions/1adc6af9-a044-441e-a466-a4d582f2be69/9ff21c5b-cc79-455a-bcd4-533ef1c5cab8/local_3f77fd8f-3373-4562-b41e-827b0b9fe7dc/outputs/claude_fable.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,12 @@ select{padding:6px 10px;border:1px solid #ccd4dc;border-radius:6px;background:#f
 <body>
 <div class="wrap">
 
+<div style="background:#b45309;color:#fff;text-align:center;font-weight:700;letter-spacing:1px;font-size:13px;padding:7px;border-radius:8px;margin-bottom:10px">DRAFT &amp; PRELIMINARY · SUBJECT TO REVISION</div>
 <div class="hdr">
+  <div style="float:right;display:flex;gap:8px">
+    <button onclick="shareLI()" style="background:#0a66c2;color:#fff;border:none;border-radius:6px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer">Share on LinkedIn</button>
+    <button id="cpBtn" onclick="copyLink()" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer">Copy link</button>
+  </div>
   <h1>Who Wants a National Bank Charter? OCC Applications, 2014–2026</h1>
   <div class="sub">Twelve years of de novo charter and conversion applications before the Office of the Comptroller of the Currency — from the post-crisis drought, through the failed first fintech/crypto wave of 2018–2021, to the 2025–26 surge — dominated by an unprecedented wave of digital-asset and fintech filings after the OCC amended 12 CFR 5.20 (effective April 1, 2026) to clarify that national trust banks may hold assets in non-fiduciary custody. Includes Call Report data from FFIEC filings for the banks that have opened.</div>
   <div class="asof">Data as of July 18, 2026 · Sources: OCC.gov, FFIEC CDR, FDIC BankFind · Compiled with AI assistance</div>
@@ -355,6 +360,18 @@ new Chart(document.getElementById("cType"),{type:"doughnut",data:{
   labels:["De novo trust bank","De novo national bank","Conversion"],
   datasets:[{data:[12,6,5],backgroundColor:["#7c3aedCC","#0891b2CC","#937860CC"],borderColor:"#fff",borderWidth:2}]},
   options:{responsive:true,maintainAspectRatio:false,cutout:"60%",plugins:{legend:{position:"bottom",labels:{usePointStyle:true,padding:12}}}}});
+</script>
+<script>
+function shareLI(){
+  var u=encodeURIComponent(window.location.href);
+  if(location.protocol==='file:'){alert('This page is open as a local file. Publish it (e.g., GitHub Pages) first, then share the public URL.');return;}
+  window.open('https://www.linkedin.com/sharing/share-offsite/?url='+u,'_blank','width=600,height=600');
+}
+function copyLink(){
+  var t=window.location.href, b=document.getElementById('cpBtn');
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy link';},1500);},
+  function(){prompt('Copy this link:',t);});
+}
 </script>
 
 
